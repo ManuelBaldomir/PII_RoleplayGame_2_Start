@@ -2,7 +2,7 @@ namespace RoleplayGame
 {
     public interface IItem
     {
-        public int AttackValue();
-        public int DefenseValue();
+        public int AttackValue {get;}
+        public int DefenseValue {get;}
     }
 }

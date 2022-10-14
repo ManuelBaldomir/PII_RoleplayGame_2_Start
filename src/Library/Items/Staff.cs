@@ -2,14 +2,9 @@ namespace RoleplayGame
 {
     public class Staff : IItem
     {
-        public int AttackValue()
-        {
-            return 100;
-        }
-
-        public int DefenseValue()
-        {
-            return 100;
-        }
+        private int attackValue = 100;
+        private int defenseValue = 100;
+        public int AttackValue {get;}
+        public int DefenseValue {get;}
     }
 }

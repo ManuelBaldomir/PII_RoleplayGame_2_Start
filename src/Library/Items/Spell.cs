@@ -2,14 +2,9 @@ namespace RoleplayGame
 {
     public class Spell : IItem
     {
-        public int AttackValue()
-        {
-            return 70;
-        }
-
-        public int DefenseValue()
-        {
-            return 70;
-        }
+        private int attackValue = 70;
+        private int defenseValue = 70;
+        public int AttackValue {get;}
+        public int DefenseValue {get;}
     }
 }

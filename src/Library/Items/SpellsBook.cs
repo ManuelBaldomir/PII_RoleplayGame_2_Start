@@ -5,25 +5,37 @@ namespace RoleplayGame
     public class SpellsBook : IItem
     {
         public Spell[] Spells { get; set; }
-        
-        public int AttackValue()
-        {
-            int value = 0;
-            foreach (Spell spell in this.Spells)
-            {
-                value += spell.AttackValue();
-            }
-            return value;
-        }
 
-        public int DefenseValue()
+        private int attackValue = 0;
+        private int defenseValue = 0;
+
+        public int AttackValue
         {
-            int value = 0;
-            foreach (Spell spell in this.Spells)
+            get
             {
-                value += spell.DefenseValue();
+                int value = 0;
+                foreach (Spell spell in this.Spells)
+                {
+                    value += spell.AttackValue;
+                }
+                return value;
             }
-            return value;
         }
+        public int DefenseValue 
+        {
+            get
+            {
+                int value = 0;
+                foreach (Spell spell in this.Spells)
+                {
+                    value += spell.DefenseValue;
+                }
+                return value;
+            }
+        }
+        
+        
+
+        
     }
 }
