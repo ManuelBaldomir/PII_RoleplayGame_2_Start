@@ -1,13 +1,14 @@
 namespace RoleplayGame
 {
-    public class Armor
+    public class Armor : IItem
     {
-        public int DefenseValue
+        public int AttackValue()
         {
-            get
-            {
-                return 25;
-            }
+            return 0;
+        }
+        public int DefenseValue()
+        {
+            return 25;
         }
     }
 }
