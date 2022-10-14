@@ -8,7 +8,7 @@ namespace Program
         static void Main(string[] args)
         {
             SpellsBook book = new SpellsBook();
-            book.Spells = new Spell[]{ new Spell() };
+            book.Spells = new Spell[]{ new Spell("Fireball", 80, 0) };
 
             Wizard gandalf = new Wizard("Gandalf");
             gandalf.Staff = new Staff();
@@ -19,16 +19,17 @@ namespace Program
             gimli.Helmet = new Helmet();
             gimli.Shield = new Shield();
 
-            Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
-            Console.WriteLine($"Gandalf attacks Gimli with ⚔️ {gandalf.AttackValue}");
+            Console.WriteLine($"Gimli has hp {gimli.Health}");
+            Console.WriteLine($"Gandalf attacks Gimli with attack {gandalf.AttackValue}");
 
             gimli.ReceiveAttack(gandalf.AttackValue);
 
-            Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
+            Console.WriteLine($"Gimli has hp {gimli.Health}");
 
             gimli.Cure();
+            Console.WriteLine("Gimli se cura");
 
-            Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
+            Console.WriteLine($"Gimli has hp {gimli.Health}");
         }
     }
 }
