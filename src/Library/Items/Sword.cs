@@ -2,13 +2,9 @@ namespace RoleplayGame
 {
     public class Sword : IItem
     {
-        public int AttackValue()
-        {
-            return 20;
-        }
-        public int DefenseValue()
-        {
-            return 0;
-        }
+        private int attackValue = 20;
+        private int defenseValue = 0;
+        public int AttackValue {get;}
+        public int DefenseValue {get;}
     }
 }
